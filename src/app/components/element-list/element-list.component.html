@@ -1,0 +1,14 @@
+
+<p></p>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name">
+    <input type="submit" value="Filter">
+</form>
+
+
+<ul>
+    <li *ngFor="let todo of filteredTodos">
+        {{ todo.name }}
+    </li>
+</ul>
